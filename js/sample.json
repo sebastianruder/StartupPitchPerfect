@@ -1,0 +1,36 @@
+{
+    "heading": [
+        "It's a fucking",
+        "Check this shit out, a fucking"
+    ],
+
+    "response": [
+        "Already fucking exists",
+        "Pitch me again!"
+    ],
+
+    "template": [
+        "A @X for @Y"
+    ],
+
+    "X": [
+        {
+            "name": "Uber",
+            "market": "transportation"
+        },
+        {
+            "name": "Airbnb",
+            "market": "accomodation"
+        },
+        {
+            "name": "LinkedIn",
+            "market": "business"
+        }
+    ],
+
+    "Y": [
+        "gardeners",
+        "drug dealers",
+        "surgeons"
+    ]
+}

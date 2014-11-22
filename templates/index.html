@@ -31,6 +31,12 @@
 			}
 		</script>
 
+        <!-- WTFEngine scripts -->
+        <script src="//cdnjs.cloudflare.com/ajax/libs/zepto/1.1.2/zepto.min.js"></script>
+		<script>window.Zepto || document.write('<script src="/js/vendor/zepto.min.js"><\/script>')</script>
+		<script src="/js/wtf.js"></script>
+		<script src="/js/wtf_main.js"></script>
+
 		<!--[if lt IE 9]>
 		<script src="/lib/js/html5shiv.js"></script>
 		<![endif]-->
@@ -43,15 +49,32 @@
 			<!-- Any section element inside of this container is displayed as a slide -->
 			<div class="slides">
 				<section>
-					<h1>Startup Pitch Perfect</h1>
-					<h3>Battledecks for Startups</h3>
-					<p>
+                    <article>
+                    </article>
+					<h2>Startup Pitch Perfect</h2>
+					<h4>Battledecks for Startups</h4>
+                    <p>
+                        <small>Improve your pitching skills! Convince your mates of your new startup. Ready? Go!</small>
+                    </p>
+                    <div id="slide1">
+                        <noscript>
+                            Please enable Javascript.
+                        </noscript>
+                    </div>
+                    <a id="generate" href="#" title="Pitch again!"></a>
+                    <p>
 						<small>Created by <a href="http://sebastianruder.com">Sebastian Ruder</a> / <a href="http://twitter.com/rudersebastian">@rudersebastian</a><br>
-                            with <a href="https://github.com/hakimel/reveal.js">reveal.js</a>, <a href="https://github.com/nnnick/Chart.js">Chart.js</a> and <a href="https://github.com/soulwire/WTFEngine">WTFEngine</a></small>
+                            Using <a href="https://github.com/hakimel/reveal.js">reveal.js</a>, <a href="https://github.com/nnnick/Chart.js">Chart.js</a> and <a href="https://github.com/soulwire/WTFEngine">WTFEngine</a><br>
+                            Inspired by <a href="http://itsthisforthat.com/">ItsThisForThat</a>
+                        </small>
 					</p>
+
 				</section>
 
 				<section>
+
+                    <div id="slide2"></div>
+
 					<h2>Heads Up</h2>
 					<p>
 						reveal.js is a framework for easily creating beautiful presentations using HTML. You'll need a browser with
