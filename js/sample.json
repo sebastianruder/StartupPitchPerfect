@@ -5,12 +5,11 @@
     ],
 
     "response": [
-        "Already fucking exists",
         "Pitch me again!"
     ],
 
     "template": [
-        "A @X for @Y"
+        "A @X<br>for @Y"
     ],
 
     "X": [

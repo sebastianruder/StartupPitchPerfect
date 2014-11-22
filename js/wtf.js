@@ -99,8 +99,17 @@ var WTF = (function() {
 
         dom = {
             generate: $( '#generate' ),
-            slide1: $( '#slide1' ),
-            slide2: $( '#slide2')
+            elevator_pitch: $( '#elevator_pitch' ),
+            traction: $( '#traction'),
+            market: $( '#market'),
+            problem: $( '#problem' ),
+            product: $( '#product' ),
+            business_model: $( '#business_model' ),
+            strategy: $( '#strategy' ),
+            team: $( '#team' ),
+            financials: $( '#financials' ),
+            competition: $( '#competition' ),
+            investment: $( '#investment' )
         };
 
         dom.generate.click( function() {
@@ -140,7 +149,7 @@ var WTF = (function() {
 
     function generate() {
 
-        var placeholder, key, word, iter = 0, // Safety mechanism
+        var placeholder, key, word, market, iter = 0, // Safety mechanism
             // idea = randomItem( templates ),
             idea = templates[0],
             item = regex.exec( idea ),
@@ -153,8 +162,9 @@ var WTF = (function() {
 
             word = randomItem( copied_corpus[ key ], true);
 
-            // "X" is the key of a nested JSON array
+            // to account for nested JSON array of which "X" is the key
             if (key === "X") {
+                market = word.market;
                 word = word.name;
             }
             console.log( word );
@@ -166,17 +176,15 @@ var WTF = (function() {
         }
 
         // Update slides
+        //dom.generate.text( randomItem( responses ));
+        dom.generate.text(responses[0])
 
-        dom.generate.text( randomItem( responses ) );
-        dom.slide1.html(
-            '<h1>' + idea + '</h1>' +
-            '<p>' + randomItem( idea ) + '<p>'
+        dom.elevator_pitch.html(
+            '<h1>' + idea + '</h1>'
         );
-        dom.slide2.html(
-            '<dl>' +
-                '<dt>' + randomItem( headings ) + '</dt>' +
-                '<dd>' + idea + '</dd>' +
-            '</dl>'
+
+        dom.traction.html(
+            '<p>' + market + '<p>'
         );
 
         /*
