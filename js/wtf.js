@@ -154,20 +154,26 @@ var WTF = (function() {
             idea = templates[0],
             item = regex.exec( idea ),
             copied_corpus = cloneCorpus();
+        var object;
+        var name = "";
 
         while ( item && ++iter < 1000 ) {
 
             placeholder = item[ 0 ]; // has form "@X"
             key = item[ 1 ]; // has form "X"
 
-            word = randomItem( copied_corpus[ key ], true);
+            // object is an object with attribute "name", etc.
+            object = randomItem( copied_corpus[ key ], true);
+            word = object.name;
+            name += randomItem(object.affixes);
 
             // to account for nested JSON array of which "X" is the key
             if (key === "X") {
-                market = word.market;
-                word = word.name;
+                market = object.market;
             }
-            console.log( word );
+            else if (key === "Y") {
+            }
+            console.log(name);
 
             idea = idea.replace( placeholder, word );
 
@@ -180,7 +186,11 @@ var WTF = (function() {
         dom.generate.text(responses[0])
 
         dom.elevator_pitch.html(
-            '<h1>' + idea + '</h1>'
+            '<p><small>Improve your pitching skills! Convince your mates that your startup is the next ' +
+            randomItem( copied_corpus.next ) + '. Ready?</small></p>' +
+            '<h1>' + name + '</h1>' +
+            '<h3>A ' + idea + '</h3>'
+
         );
 
         dom.traction.html(

@@ -9,27 +9,100 @@
     ],
 
     "template": [
-        "A @X<br>for @Y"
+        "@X<br>for @Y"
+    ],
+
+    "next" : [
+        "Google",
+        "Facebook",
+        "Twitter",
+        "Uber",
+        "Airbnb"
     ],
 
     "X": [
         {
             "name": "Uber",
+            "affixes": [
+                "Insta",
+                "Push for ",
+                "Click for ",
+                "Swipe for ",
+                "Rocket",
+                "On demand "
+            ],
             "market": "transportation"
         },
         {
             "name": "Airbnb",
+            "affixes": [
+                "Sleep",
+                "Guest"
+            ],
             "market": "accomodation"
         },
         {
             "name": "LinkedIn",
+            "affixes": [
+                "Suit",
+                "Biz"
+            ],
             "market": "business"
+        },
+        {
+            "name": "Wikipedia",
+            "affixes": [
+                "Know"
+            ]
         }
     ],
 
     "Y": [
-        "gardeners",
-        "drug dealers",
-        "surgeons"
+        {
+            "name": "gardeners",
+            "affixes": [
+                "green",
+                "garden",
+                "bloom"
+            ]
+        },
+        {
+            "name": "drug dealers",
+            "affixes": [
+                "weed",
+                "crack",
+                "dope"
+            ]
+        },
+        {
+            "name": "doctors",
+            "affixes":
+                [
+                    "med"
+                ]
+        },
+        {
+            "name": "pilots",
+            "affixes":
+                [
+                    "jet"
+                ]
+        },
+        {
+            "name": "foodies",
+            "affixes":
+                [
+                    "gourmet",
+                    "foodie",
+                    "cuisine"
+                ]
+        },
+        {
+            "name": "hipsters",
+            "affixes":
+                [
+                    "hip"
+                ]
+        }
     ]
 }
