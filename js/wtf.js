@@ -100,7 +100,6 @@ var WTF = (function() {
         dom = {
             generate: $( '#generate' ),
             elevator_pitch: $( '#elevator_pitch' ),
-            traction: $( '#traction'),
             market: $( '#market'),
             problem: $( '#problem' ),
             product: $( '#product' ),
@@ -178,8 +177,7 @@ var WTF = (function() {
                     object.affixes.push("ly");
                     object.affixes.push("io");
                 }
-                market += " for " + word;
-                customers = name;
+                customers = word;
             }
 
             console.log( object, object.affixes );
@@ -208,13 +206,13 @@ var WTF = (function() {
         );
 
         dom.market.html(
-            "<p>Global '" + market + "' market size: $" + Math.round(Math.random()*1000)/100 + 'bn<br>' +
+            "<p>Global '" + market + ' for ' + customers + "' market size: $" + Math.round(Math.random()*1000)/100 + 'bn<br>' +
             'Customer base: ' + customers + '<p>'
         );
 
-        dom.traction.html(
-            '<p>' + market + '<p>'
-        );
+        dom.problem.html(
+            '<p>' + customers + ' need ' + market + '<p>'
+        )
 
         dom.competition.html(
             '<p>' + competitor1 + '<br>' + competitor2 + '<br>' + competitor3 + '<p>'

@@ -32,13 +32,14 @@
 		</script>
 
         <!-- WTFEngine scripts -->
-        <script src="//cdnjs.cloudflare.com/ajax/libs/zepto/1.1.2/zepto.min.js"></script>
+        <!-- <script src="//cdnjs.cloudflare.com/ajax/libs/zepto/1.1.2/zepto.min.js"></script>-->
+        <script src="/js/zepto.min.js"></script>
 		<script>window.Zepto || document.write('<script src="/js/vendor/zepto.min.js"><\/script>')</script>
 		<script src="/js/wtf.js"></script>
 		<script src="/js/wtf_main.js"></script>
 
-        <!-- Chart.js -->
-        <script src="/js/Chart.js"></script>
+        <!-- Chart.js https://github.com/FVANCOP/ChartNew.js -->
+        <script src="/js/ChartNew.js"></script>
         <script src="/js/charts.js"></script>
 
 		<!--[if lt IE 9]>
@@ -74,7 +75,6 @@
 
 				<section>
                     <h2>Traction</h2>
-                    <!-- <div id="traction"></div> -->
                     <canvas id="traction_chart"></canvas>
 	            <script></script>
 
@@ -86,11 +86,14 @@
 				</section>
 
 				<section>
-					<h2>Problem & current solutions</h2>
+					<h2>Problem</h2>
+                    <div id="problem"></div>
+                    <canvas id="new_chart" width="400%" height="400%"></canvas>
 				</section>
 
 				<section>
 					<h2>Product</h2>
+
 				</section>
 
 				<section>
@@ -135,8 +138,8 @@
 
 		</div>
 
-		<script src="lib/js/head.min.js"></script>
-		<script src="js/reveal.min.js"></script>
+		<script src="/lib/js/head.min.js"></script>
+		<script src="/js/reveal.min.js"></script>
 
 		<script>
 
