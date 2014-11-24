@@ -24,36 +24,108 @@
         {
             "name": "Uber",
             "affixes": [
-                "Insta",
-                "Push for ",
-                "Click for ",
-                "Swipe for ",
-                "Rocket",
-                "On demand "
+                "Insta", "Push for ", "Click for ", "Swipe for ", "Rocket", "On demand ", "Fast"
             ],
-            "market": "transportation"
+            "market": "on-demand services"
         },
         {
             "name": "Airbnb",
             "affixes": [
-                "Sleep",
-                "Guest"
+                "Sleep", "Guest", "Stay", "Night", "Lodge", "Hotel", "Tonight", "Bed", "Room", "Lounge", "Host"
             ],
             "market": "accomodation"
         },
         {
             "name": "LinkedIn",
             "affixes": [
-                "Suit",
-                "Biz"
+                "Suit", "Biz", "Enterprise", "Corp", "Business"
             ],
-            "market": "business"
+            "market": "professional networking"
         },
         {
             "name": "Wikipedia",
             "affixes": [
-                "Know"
-            ]
+                "Know", "Info", "Wiki"
+            ],
+            "market": "knowledge"
+
+        },
+        {
+            "name": "GitHub",
+            "affixes": [
+                "Manage", "Work", "Team"
+            ],
+            "market": "collaboration"
+        },
+        {
+            "name": "Tinder",
+            "affixes": [
+                "Date", "Match", "Find", "Meet", "Love"
+            ],
+            "market": "matching"
+        },
+        {
+            "name": "Twitch",
+            "affixes": [
+                "Stream", "Watch", "Show", "Live"
+            ],
+            "market": "live-streaming"
+        },
+        {
+            "name": "Reddit",
+            "affixes": [
+                "News", "User", "Aggregate", "Content", "Up"
+            ],
+            "market": "user-generated news"
+        },
+        {
+            "name": "OpenTable",
+            "affixes": [
+                "Reserve", "Open", "Place", "Seat"
+            ],
+            "market": "reservations"
+        },
+        {
+            "name": "Yelp",
+            "affixes": [
+                "Review", "Star", "Local", "Rate"
+            ],
+            "market": "reviews"
+        },
+        {
+            "name": "Facebook",
+            "affixes": [
+                "Social", "Net", "Like", "Friend"
+            ],
+            "market": "social networking"
+        },
+        {
+            "name": "Ebay",
+            "affixes": [
+                "Buy", "Auction", "Shop", "Market"
+            ],
+            "market": "marketplace"
+        },
+        {
+            "name": "Youtube",
+            "affixes": [
+                "Upload", "Stream", "Post", "Original", "Indie"
+            ],
+            "market": "streaming"
+        },
+        {
+            "name": "Pandora",
+            "affixes": [
+                "Auto", "Recommend", "Radio"
+            ],
+            "market": "recommendations"
+        },
+        {
+            "name": "Foursquare",
+            "affixes": [
+                "Check", "Place", "Local"
+            ],
+            "market": "local discovery"
         }
     ],
 
@@ -61,48 +133,92 @@
         {
             "name": "gardeners",
             "affixes": [
-                "green",
-                "garden",
-                "bloom"
+                "green", "garden", "bloom", "nature"
             ]
         },
         {
             "name": "drug dealers",
             "affixes": [
-                "weed",
-                "crack",
-                "dope"
+                "weed", "crack", "dope", "grass", "pot", "bhang", "hemp", "herb", "tea"
             ]
         },
         {
             "name": "doctors",
-            "affixes":
-                [
-                    "med"
+            "affixes": [
+                    "med", "health", "care", "doc"
                 ]
         },
         {
             "name": "pilots",
-            "affixes":
-                [
-                    "jet"
+            "affixes": [
+                    "jet", "fly", "mach", "land", "start"
                 ]
         },
         {
             "name": "foodies",
-            "affixes":
-                [
-                    "gourmet",
-                    "foodie",
-                    "cuisine"
+            "affixes": [
+                    "gourmet", "foodie", "cuisine", "yum"
                 ]
         },
         {
             "name": "hipsters",
-            "affixes":
-                [
-                    "hip"
+            "affixes": [
+                    "hip", "retro"
                 ]
+        },
+        {
+            "name": "stock brokers",
+            "affixes": [
+                    "stocks", "crunch", "econ", "fin"
+                ]
+        },
+        {
+            "name": "software engineers",
+            "affixes": [
+                    "ware", "code"
+                ]
+        },
+        {
+            "name": "video game players",
+            "affixes": [
+                "game", "play", "vid", "play"
+            ]
+        },
+        {
+            "name": "race car drivers",
+            "affixes": [
+                "race", "fast", "track"
+            ]
+        },
+        {
+            "name": "musicians",
+            "affixes": [
+                "music", "rock", "note"
+            ]
+        },
+        {
+            "name": "fitness enthusiasts",
+            "affixes": [
+                "health", "fit", "healthy"
+            ]
+        },
+        {
+            "name": "productivity nuts",
+            "affixes": [
+                "do", "achieve", "done"
+            ]
+        },
+        {
+            "name": "travelers",
+            "affixes": [
+                "travel", "world", "trip", "sight"
+            ]
+        },
+        {
+            "name": "bros",
+            "affixes": [
+                "bro", "frat", "alpha", "beta", "gamma", "phi"
+            ]
         }
     ]
 }

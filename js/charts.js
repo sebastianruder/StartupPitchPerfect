@@ -1,7 +1,7 @@
 // data for traction chart
-var randomScalingFactor = function(){ return Math.round(Math.random()*100)};
+var randomScalingFactor = function(){ return Math.round(Math.random()*500000)};
 var lineChartData = {
-    labels : ["January","February","March","April","May","June","July"],
+    labels : ["May","June","July","August","September","October","November"],
     datasets : [
         {
             label: "My First dataset",
@@ -11,7 +11,7 @@ var lineChartData = {
             pointStrokeColor : "#fff",
             pointHighlightFill : "#fff",
             pointHighlightStroke : "rgba(220,220,220,1)",
-            data : [randomScalingFactor(),randomScalingFactor(),randomScalingFactor(),randomScalingFactor(),randomScalingFactor(),randomScalingFactor(),randomScalingFactor()]
+            data : [randomScalingFactor()*0.3,randomScalingFactor()*0.5,randomScalingFactor()*0.8,randomScalingFactor()*1.2,randomScalingFactor()*1.5,randomScalingFactor()*1.8,randomScalingFactor()*2]
         }
     ]
 }

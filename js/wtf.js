@@ -153,27 +153,41 @@ var WTF = (function() {
             // idea = randomItem( templates ),
             idea = templates[0],
             item = regex.exec( idea ),
-            copied_corpus = cloneCorpus();
-        var object;
-        var name = "";
+            copied_corpus = cloneCorpus(),
+            object, customers, name = "", competitor1 = "", competitor2 = "", competitor3 = "";
 
         while ( item && ++iter < 1000 ) {
 
             placeholder = item[ 0 ]; // has form "@X"
             key = item[ 1 ]; // has form "X"
 
-            // object is an object with attribute "name", etc.
-            object = randomItem( copied_corpus[ key ], true);
-            word = object.name;
-            name += randomItem(object.affixes);
+            console.log(copied_corpus);
 
-            // to account for nested JSON array of which "X" is the key
+            // object is an object with attribute "name", etc.
+            object = randomItem(copied_corpus[ key ], true);
+            word = object.name;
+
+            // only "X" has market attribute
             if (key === "X") {
                 market = object.market;
             }
             else if (key === "Y") {
+
+                if (!name.endsWith(" ")) {
+                    // "ly" and "io" are popular startup suffixes
+                    object.affixes.push("ly");
+                    object.affixes.push("io");
+                }
+                market += " for " + word;
+                customers = name;
             }
-            console.log(name);
+
+            console.log( object, object.affixes );
+
+            name += randomItem(object.affixes);
+            competitor1 += randomItem(object.affixes);
+            competitor2 += randomItem(object.affixes);
+            competitor3 += randomItem(object.affixes);
 
             idea = idea.replace( placeholder, word );
 
@@ -193,8 +207,17 @@ var WTF = (function() {
 
         );
 
+        dom.market.html(
+            "<p>Global '" + market + "' market size: $" + Math.round(Math.random()*1000)/100 + 'bn<br>' +
+            'Customer base: ' + customers + '<p>'
+        );
+
         dom.traction.html(
             '<p>' + market + '<p>'
+        );
+
+        dom.competition.html(
+            '<p>' + competitor1 + '<br>' + competitor2 + '<br>' + competitor3 + '<p>'
         );
 
         /*
@@ -203,6 +226,12 @@ var WTF = (function() {
         hideOutput();
         */
     }
+
+    String.prototype.endsWith = function(suffix) {
+
+        return this.indexOf(suffix, this.length - suffix.length) !== -1;
+
+    };
 
     function hideOutput() {
 
