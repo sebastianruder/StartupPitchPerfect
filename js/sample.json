@@ -127,7 +127,8 @@
                 "green", "garden", "bloom", "nature"
             ],
             "words": [
-                "pest plant", "watering can"
+                "weedkillers", "watering cans", "meticulously cut lawn", "garden ornaments", "hedge scultpures",
+                "exotic flowers"
             ]
         },
         {
@@ -136,7 +137,7 @@
                 "weed", "crack", "dope", "grass", "pot", "bhang", "hemp", "herb", "tea"
             ],
             "words": [
-                "weed", "hashish"
+                "weed", "hashish", "loyal customers", "no trouble"
             ]
         },
         {
@@ -145,7 +146,7 @@
                     "med", "health", "care", "doc"
                 ],
             "words": [
-                "health", "waiting room"
+                "health", "waiting room", "patient interaction", "trustworthy receptionists", "short office hours"
             ]
 
         },
@@ -182,7 +183,7 @@
                     "stocks", "crunch", "econ", "fin"
             ],
             "words": [
-                "Black Friday", "financial crisis", "lobby", "bribing"
+                "earning money", "lobbying", "bribing"
             ]
         },
         {
@@ -191,7 +192,7 @@
                     "ware", "code"
             ],
             "words": [
-                "stack overflow", "buffer error"
+                "solving hard problems", "figuring out bugs", "building things", "learning things"
             ]
         },
         {
@@ -200,7 +201,7 @@
                 "game", "play", "vid", "play"
             ],
             "words": [
-                "end boss", "stage", "game over"
+                "beating end bosses", "winning", "playing"
             ]
         },
         {
@@ -209,7 +210,7 @@
                 "race", "fast", "track", "pitstop"
             ],
             "words": [
-                "race", "Formula One", "Mario Kart", "pitstop"
+                "races", "Formula One", "Mario Kart", "pitstops"
             ]
         },
         {
@@ -218,7 +219,7 @@
                 "music", "rock", "note"
             ],
             "words": [
-                "music", "rock", "jam"
+                "free music streaming", "instruments", "rock", "jam sessions"
             ]
         },
         {
@@ -227,7 +228,7 @@
                 "health", "fit", "healthy"
             ],
             "words": [
-                "health", "fitness"
+                "food diaries", "activity trackers", "long runs"
             ]
         },
         {
@@ -236,7 +237,7 @@
                 "do", "achieve", "done"
             ],
             "words": [
-                "productivity", "to-do list", "meditation"
+                "productivity", "to-do lists", "meditation sessions", "yoga sessions"
             ]
         },
         {
@@ -245,7 +246,7 @@
                 "travel", "world", "trip", "sight", "globe"
             ],
             "words": [
-                "trip", "sight", "globe"
+                "around-the-world trips", "world-famous sights", "traveling around the globe"
             ]
         },
         {
@@ -254,9 +255,41 @@
                 "bro", "frat", "alpha", "beta", "gamma", "phi"
             ],
             "words": [
-                "sorority chicks", "kegs", "cheap parties"
+                "sorority chicks", "kegs", "cheap parties", "alcohol", "spring break", "frat parties"
+            ]
+        },
+        {
+            "name": "model train builders",
+            "affixes": [
+                "train", "build", "track", "loco", "motion", "engine", "rail"
+            ],
+            "words": [
+                "elaborate model train tracks", "rail kits", "model train conventions"
+            ]
+        },
+        {
+            "name": "chess players",
+            "affixes": [
+                "check", "chess", "king", "rook"
+            ],
+            "words": [
+                "blitz chess", "chess world championships", "themed chess sets"
+            ]
+        },
+        {
+            "name": "horse lovers",
+            "affixes": [
+                "horse", "pony", "mare", "barn"
+            ],
+            "words": [
+                "show jumping competitions", "dressage competition", "going for a ride"
             ]
         }
+    ],
+
+    "hype_cycle": [
+        "Technology Trigger", "Peak of Inflated Expectations", "Trough of Disillusionment",
+        "Slope of Enlightenment", "Plateau of Productivity"
     ],
 
     "attributes": [
@@ -272,7 +305,7 @@
 
     "product": [
         "app", "website", "browser plugin", "Google Glass app", "smartwatch app", "game", "800 pound gorilla",
-        "turnkey solution"
+        "turnkey solution", "activity tracker", "analytics website"
     ],
 
     "executive": [

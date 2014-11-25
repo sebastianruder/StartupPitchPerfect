@@ -22,6 +22,101 @@ var WTF = (function() {
     var regex;
     var dom;
 
+    // data for traction chart
+    var randomScalingFactor = function(){ return Math.round(Math.random()*500000)};
+    var tractionChartData = {
+        labels : ["May","June","July","August","September","October","November"],
+        datasets : [
+            {
+                label: "My First dataset",
+                labels: ["one", "two", "three", "four", "five", "six", "seven"],
+                fillColor : "rgba(220,220,220,0.2)",
+                strokeColor : "rgba(220,220,220,1)",
+                pointColor : "rgba(220,220,220,1)",
+                pointStrokeColor : "#fff",
+                pointHighlightFill : "#fff",
+                pointHighlightStroke : "rgba(220,220,220,1)",
+                data : [randomScalingFactor()*0.3,randomScalingFactor()*0.5,randomScalingFactor()*0.8,randomScalingFactor()*1.2,randomScalingFactor()*1.5,randomScalingFactor()*1.8,randomScalingFactor()*2]
+            }
+        ]
+    }
+
+    // data for problem chart
+    var problemChartData = [{
+        value : randomScalingFactor()*2,
+        color: "#D97041",
+        title : "would sell their left kidney for it"
+    },
+    {
+        value : randomScalingFactor()*1.5,
+        color: "#C7604C",
+        title : "need it a lot"
+    },
+    {
+        value : randomScalingFactor(),
+        color: "#21323D",
+        title : "would maybe buy it"
+    },
+    {
+        value : randomScalingFactor(),
+        color: "#9D9B7F",
+        title : "are indifferent"
+    }
+    /*
+    {
+        value : 82,
+        color: "#7D4F6D",
+      title : "data5"
+    },
+    {
+        value : 8,
+        color: "#584A5E",
+      title : "data6"
+    }
+    */
+    ];
+
+    // line and bar chart coloring context (color change to white)
+    var lineBarChartContext = {
+        responsive: true,
+        // inGraphDataShow : true,
+        inGraphDataFontColor: "#FFF",
+        scaleFontColor: "#FFF"
+    };
+
+    // problem chart context
+    var problemChartContext = {/*
+        inGraphDataShow: true,
+        inGraphDataFontColor: "#FFF",
+        inGraphDataFontSize: 15,
+        // radiusScale: 1.3,
+        inGraphDataAlign: "to-center",
+        inGraphDataVAlign: "to-center",
+        inGraphDataRotate: "inRadiusAxisRotateLabels", // "inRadiusAxisRotateLabels"
+        */
+        legend: true,
+        legendFontSize: 20,
+        legendFontStyle: "normal",
+        legendFontColor: "#FFF",
+        legendBlockSize: 15,
+        legendBorders: false,
+        legendBordersWidth: 1
+    };
+
+    // revenue chart data
+    var revenueChartData = {
+        labels : ["January","February","March"],
+        datasets : [
+            {
+                fillColor : "rgba(220,220,220,0.5)",
+                strokeColor : "rgba(220,220,220,0.8)",
+                highlightFill: "rgba(220,220,220,0.75)",
+                highlightStroke: "rgba(220,220,220,1)",
+                data : [randomScalingFactor()*2,randomScalingFactor()*2,randomScalingFactor()*2]
+            }
+        ]
+    }
+
     /*
       ------------------------------------------------------------
 
@@ -150,7 +245,13 @@ var WTF = (function() {
             idea = templates[0],
             item = regex.exec( idea ),
             copied_corpus = cloneCorpus(),
-            object, customers, name = "", competitor1 = "", competitor2 = "", competitor3 = "";
+            object, customers, sale, name = "", competitor1 = "", competitor2 = "", competitor3 = "";
+
+        // draw traction and problem chart; revenue chart is drawn later
+        var traction_chart = document.getElementById("traction_chart").getContext("2d");
+        window.traction = new Chart(traction_chart).Line(tractionChartData, lineBarChartContext);
+        var problem_chart = document.getElementById("problem_chart").getContext("2d");
+        window.problem = new Chart(problem_chart).Pie(problemChartData, problemChartContext);
 
         while ( item && ++iter < 1000 ) {
 
@@ -176,7 +277,16 @@ var WTF = (function() {
                     object.affixes.push("ly");
                     object.affixes.push("io");
                 }
+                // slice copies array without reference
+                var words = object.words.slice(0);
+                // set new revenue chart labels, draw new revenue chart
+                revenueChartData.labels = [randomItem(words, true), randomItem(words, true), randomItem(words)];
+                var revenue_chart = new Chart(document.getElementById("revenue_chart").getContext("2d")).Bar(
+                    revenueChartData, lineBarChartContext);
+
                 customers = word;
+                sale = randomItem(object.words);
+                console.log(object.words);
                 copied_corpus.executive.push(capitaliseFirstLetter(randomItem(object.words, true)));
                 copied_corpus.executive.push(capitaliseFirstLetter(randomItem(object.words)));
             }
@@ -194,6 +304,7 @@ var WTF = (function() {
             item = regex.exec( idea );
         }
 
+
         // Update slides
         //dom.generate.text( randomItem( responses ));
         dom.generate.text(responses[0])
@@ -207,12 +318,13 @@ var WTF = (function() {
 
         // attributes derived from http://ideonomy.mit.edu/essays/traits.html
         dom.market.html(
-            "<p>Global '" + market + ' for ' + customers + "' market size: $" + Math.round(Math.random()*1000)/100 + 'bn<p><br>' +
+            "<p><strong>Global '" + market + ' for ' + customers + "' market size</strong>: $" + Math.round(Math.random()*1000)/100 + 'bn<p><br>' +
             '<h3>Customer base</h3><ul>' +
 			    '<li>' + randomItem(copied_corpus.attributes, true) + ' '+ customers + '</li>' +
 				'<li>' + randomItem(copied_corpus.attributes, true) + ' '+ customers + '</li>' +
 				'<li>' + randomItem(copied_corpus.attributes, true) + ' '+ customers + '</li>' +
-			'</ul>'
+			'</ul>' +
+            '<p><br><strong>Hype cycle phase</strong>: ' + randomItem(copied_corpus.hype_cycle) + '<p>'
         );
 
         dom.problem.html(
@@ -226,8 +338,19 @@ var WTF = (function() {
 				'<li>' + randomItem(copied_corpus.buzzwords, true) + '</li>' +
 				'<li>' + randomItem(copied_corpus.buzzwords, true) + '</li>' +
 				'<li>' + randomItem(copied_corpus.buzzwords, true) + '</li>' +
-				'<li>' + randomItem(copied_corpus.buzzwords, true) + ' ' + randomItem(copied_corpus.product) + '</li>' +
+				'<li>' + randomItem(copied_corpus.buzzwords, true) + ' ' + randomItem(copied_corpus.product) + '.</li>' +
 			'</ul>'
+        );
+
+        dom.strategy.html(
+            '<p><ol>' +
+			    '<li>' + capitaliseFirstLetter(customers) + ' like ' + sale + '.</li>' +
+				'<li>Sell ' + market + ' for ' + sale + '.</li>' +
+				'<li>...</li>' +
+                '<li>Make ' + market + ' ' + randomItem(copied_corpus.buzzwords, true) + '.</li>' +
+				'<li>...</li>' +
+				'<li>Earn money.</li>' +
+			'</ol>'
         );
 
         dom.team.html(
@@ -239,12 +362,6 @@ var WTF = (function() {
         dom.competition.html(
             '<p>' + competitor1 + '<br>' + competitor2 + '<br>' + competitor3 + '<p>'
         );
-
-        /*
-        // Toggle animation
-        setTimeout( showOutput, 0 );
-        hideOutput();
-        */
     }
 
     String.prototype.endsWith = function(suffix) {
@@ -269,14 +386,11 @@ var WTF = (function() {
     }
 
     function randomItem( list, remove ) {
-
         var index = ~~( Math.random() * list.length );
         var item = list[ index ];
-
-        if ( remove )
-
+        if ( remove ) {
             list.splice( index, 1 );
-
+        }
         return item;
     }
 
@@ -289,6 +403,10 @@ var WTF = (function() {
             copy[ key ] = corpus[ key ].concat();
         
         return copy;
+    }
+
+    function drawCharts() {
+
     }
 
     /*
