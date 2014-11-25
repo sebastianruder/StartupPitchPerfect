@@ -18,7 +18,6 @@ var WTF = (function() {
 
     var templates;
     var responses;
-    var headings;
     var corpus;
     var regex;
     var dom;
@@ -37,11 +36,9 @@ var WTF = (function() {
 
         templates = corpus.template;
         responses = corpus.response;
-        headings = corpus.heading;
 
         delete corpus.template;
         delete corpus.response;
-        delete corpus.heading;
 
         // Enable UI and generate first idea
 
@@ -160,8 +157,6 @@ var WTF = (function() {
             placeholder = item[ 0 ]; // has form "@X"
             key = item[ 1 ]; // has form "X"
 
-            console.log(copied_corpus);
-
             // object is an object with attribute "name", etc.
             object = randomItem(copied_corpus[ key ], true);
             word = object.name;
@@ -169,6 +164,10 @@ var WTF = (function() {
             // only "X" has market attribute
             if (key === "X") {
                 market = object.market;
+
+                // add killer as product name pitch
+                copied_corpus.product.push(word + "-killer");
+                console.log( copied_corpus.product);
             }
             else if (key === "Y") {
 
@@ -178,9 +177,11 @@ var WTF = (function() {
                     object.affixes.push("io");
                 }
                 customers = word;
+                copied_corpus.executive.push(capitaliseFirstLetter(randomItem(object.words, true)));
+                copied_corpus.executive.push(capitaliseFirstLetter(randomItem(object.words)));
             }
 
-            console.log( object, object.affixes );
+            // console.log( object, object.affixes );
 
             name += randomItem(object.affixes);
             competitor1 += randomItem(object.affixes);
@@ -202,17 +203,38 @@ var WTF = (function() {
             randomItem( copied_corpus.next ) + '. Ready?</small></p>' +
             '<h1>' + name + '</h1>' +
             '<h3>A ' + idea + '</h3>'
-
         );
 
+        // attributes derived from http://ideonomy.mit.edu/essays/traits.html
         dom.market.html(
-            "<p>Global '" + market + ' for ' + customers + "' market size: $" + Math.round(Math.random()*1000)/100 + 'bn<br>' +
-            'Customer base: ' + customers + '<p>'
+            "<p>Global '" + market + ' for ' + customers + "' market size: $" + Math.round(Math.random()*1000)/100 + 'bn<p><br>' +
+            '<h3>Customer base</h3><ul>' +
+			    '<li>' + randomItem(copied_corpus.attributes, true) + ' '+ customers + '</li>' +
+				'<li>' + randomItem(copied_corpus.attributes, true) + ' '+ customers + '</li>' +
+				'<li>' + randomItem(copied_corpus.attributes, true) + ' '+ customers + '</li>' +
+			'</ul>'
         );
 
         dom.problem.html(
-            '<p>' + customers + ' need ' + market + '<p>'
-        )
+            '<p>' + capitaliseFirstLetter(customers) + ' need ' + market + '.<p>'
+        );
+
+        // buzzwords taken from this Quora thread
+        dom.product.html(
+            '<p>' + name + ' is a <p><ul>' +
+			    '<li>' + randomItem(copied_corpus.buzzwords, true) + '</li>' +
+				'<li>' + randomItem(copied_corpus.buzzwords, true) + '</li>' +
+				'<li>' + randomItem(copied_corpus.buzzwords, true) + '</li>' +
+				'<li>' + randomItem(copied_corpus.buzzwords, true) + '</li>' +
+				'<li>' + randomItem(copied_corpus.buzzwords, true) + ' ' + randomItem(copied_corpus.product) + '</li>' +
+			'</ul>'
+        );
+
+        dom.team.html(
+            '<p>CEO: <br>' +
+            'Chief ' + randomItem(copied_corpus.executive, true) + ' Officer: <br>' +
+            'Chief ' + randomItem(copied_corpus.executive, true) + ' Officer: <p>'
+        );
 
         dom.competition.html(
             '<p>' + competitor1 + '<br>' + competitor2 + '<br>' + competitor3 + '<p>'
@@ -230,6 +252,11 @@ var WTF = (function() {
         return this.indexOf(suffix, this.length - suffix.length) !== -1;
 
     };
+
+    function capitaliseFirstLetter(string)
+    {
+        return string.charAt(0).toUpperCase() + string.slice(1);
+    }
 
     function hideOutput() {
 

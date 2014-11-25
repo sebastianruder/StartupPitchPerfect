@@ -1,9 +1,4 @@
 {
-    "heading": [
-        "It's a fucking",
-        "Check this shit out, a fucking"
-    ],
-
     "response": [
         "Pitch me again!"
     ],
@@ -13,11 +8,7 @@
     ],
 
     "next" : [
-        "Google",
-        "Facebook",
-        "Twitter",
-        "Uber",
-        "Airbnb"
+        "Google", "Facebook", "Twitter", "Uber", "Airbnb"
     ],
 
     "X": [
@@ -134,91 +125,157 @@
             "name": "gardeners",
             "affixes": [
                 "green", "garden", "bloom", "nature"
+            ],
+            "words": [
+                "pest plant", "watering can"
             ]
         },
         {
             "name": "drug dealers",
             "affixes": [
                 "weed", "crack", "dope", "grass", "pot", "bhang", "hemp", "herb", "tea"
+            ],
+            "words": [
+                "weed", "hashish"
             ]
         },
         {
             "name": "doctors",
             "affixes": [
                     "med", "health", "care", "doc"
-                ]
+                ],
+            "words": [
+                "health", "waiting room"
+            ]
+
         },
         {
             "name": "pilots",
             "affixes": [
-                    "jet", "fly", "mach", "land", "start"
-                ]
+                    "jet", "fly", "mach", "land", "take-off"
+            ],
+            "words" : [
+                "take-off", "landing"
+            ]
         },
         {
             "name": "foodies",
             "affixes": [
                     "gourmet", "foodie", "cuisine", "yum"
-                ]
+            ],
+            "words": [
+                "breakfast", "brunch", "lunch", "dinner"
+            ]
         },
         {
             "name": "hipsters",
             "affixes": [
-                    "hip", "retro"
-                ]
+                    "hip", "retro", "cool"
+            ],
+            "words": [
+                "old phones", "iPhone", "glasses", "scarves"
+            ]
         },
         {
             "name": "stock brokers",
             "affixes": [
                     "stocks", "crunch", "econ", "fin"
-                ]
+            ],
+            "words": [
+                "Black Friday", "financial crisis", "lobby", "bribing"
+            ]
         },
         {
             "name": "software engineers",
             "affixes": [
                     "ware", "code"
-                ]
+            ],
+            "words": [
+                "stack overflow", "buffer error"
+            ]
         },
         {
             "name": "video game players",
             "affixes": [
                 "game", "play", "vid", "play"
+            ],
+            "words": [
+                "end boss", "stage", "game over"
             ]
         },
         {
             "name": "race car drivers",
             "affixes": [
-                "race", "fast", "track"
+                "race", "fast", "track", "pitstop"
+            ],
+            "words": [
+                "race", "Formula One", "Mario Kart", "pitstop"
             ]
         },
         {
             "name": "musicians",
             "affixes": [
                 "music", "rock", "note"
+            ],
+            "words": [
+                "music", "rock", "jam"
             ]
         },
         {
             "name": "fitness enthusiasts",
             "affixes": [
                 "health", "fit", "healthy"
+            ],
+            "words": [
+                "health", "fitness"
             ]
         },
         {
             "name": "productivity nuts",
             "affixes": [
                 "do", "achieve", "done"
+            ],
+            "words": [
+                "productivity", "to-do list", "meditation"
             ]
         },
         {
             "name": "travelers",
             "affixes": [
-                "travel", "world", "trip", "sight"
+                "travel", "world", "trip", "sight", "globe"
+            ],
+            "words": [
+                "trip", "sight", "globe"
             ]
         },
         {
             "name": "bros",
             "affixes": [
                 "bro", "frat", "alpha", "beta", "gamma", "phi"
+            ],
+            "words": [
+                "sorority chicks", "kegs", "cheap parties"
             ]
         }
+    ],
+
+    "attributes": [
+        "accessible", "active", "adaptable", "admirable", "adventurous", "agreeable", "alert", "allocentric", "amiable", "anticipative", "appreciative", "articulate", "aspiring", "athletic", "attractive", "balanced", "benevolent", "brilliant", "calm", "capable", "captivating", "caring", "challenging", "charismatic", "charming", "cheerful", "clean", "clear-headed", "clever", "colorful", "companionly", "compassionate", "conciliatory", "confident", "conscientious", "considerate", "constant", "contemplative", "cooperative", "courageous", "courteous", "creative", "cultured", "curious", "daring", "debonair", "decent", "decisive", "dedicated", "deep", "dignified", "directed", "disciplined", "discreet", "dramatic", "dutiful", "dynamic", "earnest", "ebullient", "educated", "efficient", "elegant", "eloquent", "empathetic", "energetic", "enthusiastic", "esthetic", "exciting", "extraordinary", "fair", "faithful", "farsighted", "felicific", "firm", "flexible", "focused", "forecful", "forgiving", "forthright", "freethinking", "friendly", "fun-loving", "gallant", "generous", "gentle", "genuine", "good-natured", "gracious", "hardworking", "healthy", "hearty", "helpful", "herioc", "high-minded", "honest", "honorable", "humble", "humorous", "idealistic", "imaginative", "impressive", "incisive", "incorruptible", "independent", "individualistic", "innovative", "inoffensive", "insightful", "insouciant", "intelligent", "intuitive", "invulnerable", "kind", "knowledge", "leaderly", "leisurely", "liberal", "logical", "lovable", "loyal", "lyrical", "magnanimous", "many-sided", "masculine", "mature", "methodical", "maticulous", "moderate", "modest", "multi-leveled", "neat", "nonauthoritarian", "objective", "observant", "open", "optimistic", "orderly", "organized", "original", "painstaking", "passionate", "patient", "patriotic", "peaceful", "perceptive", "perfectionist", "personable", "persuasive", "planful", "playful", "polished", "popular", "practical", "precise", "principled", "profound", "protean", "protective", "providential", "prudent", "punctual", "pruposeful", "rational", "realistic", "reflective", "relaxed", "reliable", "resourceful", "respectful", "responsible", "responsive", "reverential", "romantic", "rustic", "sage", "sane", "scholarly", "scrupulous", "secure", "selfless", "self-critical", "self-defacing", "self-denying", "self-reliant", "self-sufficent", "sensitive", "sentimental", "seraphic", "serious", "sexy", "sharing", "shrewd", "simple", "skillful", "sober", "sociable", "solid", "sophisticated", "spontaneous", "sporting", "stable", "steadfast", "steady", "stoic", "strong", "studious", "suave", "subtle", "sweet", "sympathetic", "systematic", "tasteful", "teacherly", "thorough", "tidy", "tolerant", "tractable", "trusting", "uncomplaining", "understanding", "undogmatic", "unfoolable", "upright", "urbane", "venturesome", "vivacious", "warm", "well-bred", "well-read", "well-rounded", "winning", "wise", "witty", "youthful", "absentminded", "aggressive", "ambitious", "amusing", "artful", "ascetic", "authoritarian", "big-thinking", "boyish", "breezy", "businesslike", "busy", "casual", "crebral", "chummy", "circumspect", "competitive", "complex", "confidential", "conservative", "contradictory", "crisp", "cute", "deceptive", "determined", "dominating", "dreamy", "driving", "droll", "dry", "earthy", "effeminate", "emotional", "enigmatic", "experimental", "familial", "folksy", "formal", "freewheeling", "frugal", "glamorous", "guileless", "high-spirited", "huried", "hypnotic", "iconoclastic", "idiosyncratic", "impassive", "impersonal", "impressionable", "intense", "invisible", "irreligious", "irreverent", "maternal", "mellow", "modern", "moralistic", "mystical", "neutral", "noncommittal", "noncompetitive", "obedient", "old-fashined", "ordinary", "outspoken", "paternalistic", "physical", "placid", "political", "predictable", "preoccupied", "private", "progressive", "proud", "pure", "questioning", "quiet", "religious", "reserved", "restrained", "retiring", "sarcastic", "self-conscious", "sensual", "skeptical", "smooth", "soft", "solemn", "solitary", "stern", "stoiid", "strict", "stubborn", "stylish", "subjective", "surprising", "soft", "tough", "unaggressive", "unambitious", "unceremonious", "unchanging", "undemanding", "unfathomable", "unhurried", "uninhibited", "unpatriotic", "unpredicatable", "unreligious", "unsentimental", "whimsical", "abrasive", "abrupt", "agonizing", "aimless", "airy", "aloof", "amoral", "angry", "anxious", "apathetic", "arbitrary", "argumentative", "arrogantt", "artificial", "asocial", "assertive", "astigmatic", "barbaric", "bewildered", "bizarre", "bland", "blunt", "biosterous", "brittle", "brutal", "calculating", "callous", "cantakerous", "careless", "cautious", "charmless", "childish", "clumsy", "coarse", "cold", "colorless", "complacent", "complaintive", "compulsive", "conceited", "condemnatory", "conformist", "confused", "contemptible", "conventional", "cowardly", "crafty", "crass", "crazy", "criminal", "critical", "crude", "cruel", "cynical", "decadent", "deceitful", "delicate", "demanding", "dependent", "desperate", "destructive", "devious", "difficult", "dirty", "disconcerting", "discontented", "discouraging", "discourteous", "dishonest", "disloyal", "disobedient", "disorderly", "disorganized", "disputatious", "disrespectful", "disruptive", "dissolute", "dissonant", "distractible", "disturbing", "dogmatic", "domineering", "dull", "easily discouraged", "egocentric", "enervated", "envious", "erratic", "escapist", "excitable", "expedient", "extravagant", "extreme", "faithless", "false", "fanatical", "fanciful", "fatalistic", "fawning", "fearful", "fickle", "fiery", "fixed", "flamboyant", "foolish", "forgetful", "fraudulent", "frightening", "frivolous", "gloomy", "graceless", "grand", "greedy", "grim", "gullible", "hateful", "haughty", "hedonistic", "hesitant", "hidebound", "high-handed", "hostile", "ignorant", "imitative", "impatient", "impractical", "imprudent", "impulsive", "inconsiderate", "incurious", "indecisive", "indulgent", "inert", "inhibited", "insecure", "insensitive", "insincere", "insulting", "intolerant", "irascible", "irrational", "irresponsible", "irritable", "lazy", "libidinous", "loquacious", "malicious", "mannered", "mannerless", "mawkish", "mealymouthed", "mechanical", "meddlesome", "melancholic", "meretricious", "messy", "miserable", "miserly", "misguided", "mistaken", "money-minded", "monstrous", "moody", "morbid", "muddle-headed", "naive", "narcissistic", "narrow", "narrow-minded", "natty", "negativistic", "neglectful", "neurotic", "nihilistic", "obnoxious", "obsessive", "obvious", "odd", "offhand", "one-dimensional", "one-sided", "opinionated", "opportunistic", "oppressed", "outrageous", "overimaginative", "paranoid", "passive", "pedantic", "perverse", "petty", "pharissical", "phlegmatic", "plodding", "pompous", "possessive", "power-hungry", "predatory", "prejudiced", "presumptuous", "pretentious", "prim", "procrastinating", "profligate", "provocative", "pugnacious", "puritanical", "quirky", "reactionary", "reactive", "regimental", "regretful", "repentant", "repressed", "resentful", "ridiculous", "rigid", "ritualistic", "rowdy", "ruined", "sadistic", "sanctimonious", "scheming", "scornful", "secretive", "sedentary", "selfish", "self-indulgent", "shallow", "shortsighted", "shy", "silly", "single-minded", "sloppy", "slow", "sly", "small-thinking", "softheaded", "sordid", "steely", "stiff", "strong-willed", "stupid", "submissive", "superficial", "superstitious", "suspicious", "tactless", "tasteless", "tense", "thievish", "thoughtless", "timid", "transparent", "treacherous", "trendy", "troublesome", "unappreciative", "uncaring", "uncharitable", "unconvincing", "uncooperative", "uncreative", "uncritical", "unctuous", "undisciplined", "unfriendly", "ungrateful", "unhealthy", "unimaginative", "unimpressive", "unlovable", "unpolished", "unprincipled", "unrealistic", "unreflective", "unreliable", "unrestrained", "unself-critical", "unstable", "vacuous", "vague", "venal", "venomous", "vindictive", "vulnerable", "weak", "weak-willed", "well-meaning", "willful", "wishful", "zany"
+    ],
+
+    "buzzwords": [
+        "gamified", "epic", "Web 2.0", "Internet-of-things", "proactive", "synergized", "backward compatible",
+        "disintermediate", "vertically integrated", "facilitating", "paradigm-shifting", "bleeding edge", "market-leading",
+        "scalable", "enabling", "disruptive", "freemium", "hyper-social", "hyper-local", "hyper-mobile",
+        "game-changing", "ninja-like", "minimalistic", "pivoting"
+    ],
+
+    "product": [
+        "app", "website", "browser plugin", "Google Glass app", "smartwatch app", "game", "800 pound gorilla",
+        "turnkey solution"
+    ],
+
+    "executive": [
+        "Financial", "Operations", "Technology", "Information", "Marketing"
     ]
 }
