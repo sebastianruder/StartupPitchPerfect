@@ -22,101 +22,6 @@ var WTF = (function() {
     var regex;
     var dom;
 
-    // data for traction chart
-    var randomScalingFactor = function(){ return Math.round(Math.random()*500000)};
-    var tractionChartData = {
-        labels : ["May","June","July","August","September","October","November"],
-        datasets : [
-            {
-                label: "My First dataset",
-                labels: ["one", "two", "three", "four", "five", "six", "seven"],
-                fillColor : "rgba(220,220,220,0.2)",
-                strokeColor : "rgba(220,220,220,1)",
-                pointColor : "rgba(220,220,220,1)",
-                pointStrokeColor : "#fff",
-                pointHighlightFill : "#fff",
-                pointHighlightStroke : "rgba(220,220,220,1)",
-                data : [randomScalingFactor()*0.3,randomScalingFactor()*0.5,randomScalingFactor()*0.8,randomScalingFactor()*1.2,randomScalingFactor()*1.5,randomScalingFactor()*1.8,randomScalingFactor()*2]
-            }
-        ]
-    }
-
-    // data for problem chart
-    var problemChartData = [{
-        value : randomScalingFactor()*2,
-        color: "#D97041",
-        title : "would sell their left kidney for it"
-    },
-    {
-        value : randomScalingFactor()*1.5,
-        color: "#C7604C",
-        title : "need it a lot"
-    },
-    {
-        value : randomScalingFactor(),
-        color: "#21323D",
-        title : "would maybe buy it"
-    },
-    {
-        value : randomScalingFactor(),
-        color: "#9D9B7F",
-        title : "are indifferent"
-    }
-    /*
-    {
-        value : 82,
-        color: "#7D4F6D",
-      title : "data5"
-    },
-    {
-        value : 8,
-        color: "#584A5E",
-      title : "data6"
-    }
-    */
-    ];
-
-    // line and bar chart coloring context (color change to white)
-    var lineBarChartContext = {
-        responsive: true,
-        // inGraphDataShow : true,
-        inGraphDataFontColor: "#FFF",
-        scaleFontColor: "#FFF"
-    };
-
-    // problem chart context
-    var problemChartContext = {/*
-        inGraphDataShow: true,
-        inGraphDataFontColor: "#FFF",
-        inGraphDataFontSize: 15,
-        // radiusScale: 1.3,
-        inGraphDataAlign: "to-center",
-        inGraphDataVAlign: "to-center",
-        inGraphDataRotate: "inRadiusAxisRotateLabels", // "inRadiusAxisRotateLabels"
-        */
-        legend: true,
-        legendFontSize: 20,
-        legendFontStyle: "normal",
-        legendFontColor: "#FFF",
-        legendBlockSize: 15,
-        legendBorders: false,
-        legendBordersWidth: 1
-    };
-
-    // revenue chart data
-    var revenueChartData = {
-        labels : ["January","February","March"],
-        datasets : [
-            {
-                fillColor : "rgba(220,220,220,0.5)",
-                strokeColor : "rgba(220,220,220,0.8)",
-                highlightFill: "rgba(220,220,220,0.75)",
-                highlightStroke: "rgba(220,220,220,1)",
-                data : [randomScalingFactor()*2,randomScalingFactor()*2,randomScalingFactor()*2]
-            }
-        ]
-    }
-
     /*
       ------------------------------------------------------------
 
@@ -195,7 +100,7 @@ var WTF = (function() {
             market: $( '#market'),
             problem: $( '#problem' ),
             product: $( '#product' ),
-            business_model: $( '#business_model' ),
+            revenue: $( '#revenue' ),
             strategy: $( '#strategy' ),
             team: $( '#team' ),
             financials: $( '#financials' ),
@@ -244,14 +149,9 @@ var WTF = (function() {
             // idea = randomItem( templates ),
             idea = templates[0],
             item = regex.exec( idea ),
-            copied_corpus = cloneCorpus(),
-            object, customers, sale, name = "", competitor1 = "", competitor2 = "", competitor3 = "";
-
-        // draw traction and problem chart; revenue chart is drawn later
-        var traction_chart = document.getElementById("traction_chart").getContext("2d");
-        window.traction = new Chart(traction_chart).Line(tractionChartData, lineBarChartContext);
-        var problem_chart = document.getElementById("problem_chart").getContext("2d");
-        window.problem = new Chart(problem_chart).Pie(problemChartData, problemChartContext);
+            cp_corp = cloneCorpus(),
+            object, customers, sale, name = "", competitor1 = "", competitor2 = "", competitor3 = "",
+            revenue1, revenue2, revenue3, Y;
 
         while ( item && ++iter < 1000 ) {
 
@@ -259,7 +159,7 @@ var WTF = (function() {
             key = item[ 1 ]; // has form "X"
 
             // object is an object with attribute "name", etc.
-            object = randomItem(copied_corpus[ key ], true);
+            object = randomItem(cp_corp[ key ], true);
             word = object.name;
 
             // only "X" has market attribute
@@ -267,8 +167,8 @@ var WTF = (function() {
                 market = object.market;
 
                 // add killer as product name pitch
-                copied_corpus.product.push(word + "-killer");
-                console.log( copied_corpus.product);
+                cp_corp.product.push(word + "-killer");
+                console.log( cp_corp.product);
             }
             else if (key === "Y") {
 
@@ -277,26 +177,30 @@ var WTF = (function() {
                     object.affixes.push("ly");
                     object.affixes.push("io");
                 }
+                Y = object;
                 // slice copies array without reference
                 var words = object.words.slice(0);
                 // set new revenue chart labels, draw new revenue chart
-                revenueChartData.labels = [randomItem(words, true), randomItem(words, true), randomItem(words)];
+                revenue1 = randomItem(words, true); revenue2 = randomItem(words, true); revenue3 = randomItem(words, true);
+                revenueChartData.labels = [revenue1, revenue2, revenue3];
                 var revenue_chart = new Chart(document.getElementById("revenue_chart").getContext("2d")).Bar(
-                    revenueChartData, lineBarChartContext);
+                    revenueChartData, {inGraphDataFontColor: "#FFF", scaleFontColor: "#FFF"});
 
                 customers = word;
                 sale = randomItem(object.words);
                 console.log(object.words);
-                copied_corpus.executive.push(capitaliseFirstLetter(randomItem(object.words, true)));
-                copied_corpus.executive.push(capitaliseFirstLetter(randomItem(object.words)));
+                words = object.words.slice(0);
+                cp_corp.executive.push(capitaliseFirstLetter(randomItem(words, true)));
+                cp_corp.executive.push(capitaliseFirstLetter(randomItem(words)));
             }
 
             // console.log( object, object.affixes );
 
-            name += randomItem(object.affixes);
-            competitor1 += randomItem(object.affixes);
-            competitor2 += randomItem(object.affixes);
-            competitor3 += randomItem(object.affixes);
+            var affixes = object.affixes.slice(0);
+            name += randomItem(affixes, true);
+            competitor1 += randomItem(affixes, true);
+            competitor2 += randomItem(affixes, true);
+            competitor3 += randomItem(affixes);
 
             idea = idea.replace( placeholder, word );
 
@@ -304,14 +208,13 @@ var WTF = (function() {
             item = regex.exec( idea );
         }
 
-
         // Update slides
         //dom.generate.text( randomItem( responses ));
         dom.generate.text(responses[0])
 
         dom.elevator_pitch.html(
             '<p><small>Improve your pitching skills! Convince your mates that your startup is the next ' +
-            randomItem( copied_corpus.next ) + '. Ready?</small></p>' +
+            randomItem( cp_corp.next ) + '. Ready?</small></p>' +
             '<h1>' + name + '</h1>' +
             '<h3>A ' + idea + '</h3>'
         );
@@ -320,11 +223,11 @@ var WTF = (function() {
         dom.market.html(
             "<p><strong>Global '" + market + ' for ' + customers + "' market size</strong>: $" + Math.round(Math.random()*1000)/100 + 'bn<p><br>' +
             '<h3>Customer base</h3><ul>' +
-			    '<li>' + randomItem(copied_corpus.attributes, true) + ' '+ customers + '</li>' +
-				'<li>' + randomItem(copied_corpus.attributes, true) + ' '+ customers + '</li>' +
-				'<li>' + randomItem(copied_corpus.attributes, true) + ' '+ customers + '</li>' +
+			    '<li>' + randomItem(cp_corp.attributes, true) + ' '+ customers + '</li>' +
+				'<li>' + randomItem(cp_corp.attributes, true) + ' '+ customers + '</li>' +
+				'<li>' + randomItem(cp_corp.attributes, true) + ' '+ customers + '</li>' +
 			'</ul>' +
-            '<p><br><strong>Hype cycle phase</strong>: ' + randomItem(copied_corpus.hype_cycle) + '<p>'
+            '<p><br><strong>Hype cycle phase</strong>: ' + randomItem(cp_corp.hype_cycle) + '<p>'
         );
 
         dom.problem.html(
@@ -334,29 +237,51 @@ var WTF = (function() {
         // buzzwords taken from this Quora thread
         dom.product.html(
             '<p>' + name + ' is a <p><ul>' +
-			    '<li>' + randomItem(copied_corpus.buzzwords, true) + '</li>' +
-				'<li>' + randomItem(copied_corpus.buzzwords, true) + '</li>' +
-				'<li>' + randomItem(copied_corpus.buzzwords, true) + '</li>' +
-				'<li>' + randomItem(copied_corpus.buzzwords, true) + '</li>' +
-				'<li>' + randomItem(copied_corpus.buzzwords, true) + ' ' + randomItem(copied_corpus.product) + '.</li>' +
+			    '<li>' + randomItem(cp_corp.buzzwords, true) + '</li>' +
+				'<li>' + randomItem(cp_corp.buzzwords, true) + '</li>' +
+				'<li>' + randomItem(cp_corp.buzzwords, true) + '</li>' +
+				'<li>' + randomItem(cp_corp.buzzwords, true) + '</li>' +
+				'<li>' + randomItem(cp_corp.buzzwords, true) + ' ' + randomItem(cp_corp.product) + '.</li>' +
 			'</ul>'
         );
 
+        dom.revenue.html(
+            '<h3>Key revenue streams</h3>' +
+            '<ul>' +
+			    '<li>' + revenue1 + '</li>' +
+				'<li>' + revenue2 + '</li>' +
+                '<li>' + revenue3 + '</li>' +
+        	'</ul>'
+        );
+
         dom.strategy.html(
-            '<p><ol>' +
+            '<ol>' +
 			    '<li>' + capitaliseFirstLetter(customers) + ' like ' + sale + '.</li>' +
 				'<li>Sell ' + market + ' for ' + sale + '.</li>' +
 				'<li>...</li>' +
-                '<li>Make ' + market + ' ' + randomItem(copied_corpus.buzzwords, true) + '.</li>' +
+                '<li>Make ' + market + ' ' + randomItem(cp_corp.buzzwords, true) + '.</li>' +
 				'<li>...</li>' +
 				'<li>Earn money.</li>' +
 			'</ol>'
         );
 
+        // first and last names taken from http://fivethirtyeight.com/features/whats-the-most-common-name-in-america/
         dom.team.html(
-            '<p>CEO: <br>' +
-            'Chief ' + randomItem(copied_corpus.executive, true) + ' Officer: <br>' +
-            'Chief ' + randomItem(copied_corpus.executive, true) + ' Officer: <p>'
+            '<p>CEO: ' + randomItem(cp_corp.first_names, true) + ' "<i>' + randomItem(cp_corp.nicknames, true) + '</i>" ' + randomItem(cp_corp.surnames, true) + ", " + randomItem(cp_corp.lang, true) + ' ' + randomItem(cp_corp.titles, true) + '<br>' +
+            'Chief ' + randomItem(cp_corp.executive, true) + ' Officer: ' + randomItem(cp_corp.first_names, true) + ' "<i>' + randomItem(cp_corp.nicknames, true) + '</i>" ' + randomItem(cp_corp.surnames, true) + ", " + randomItem(cp_corp.lang, true) + ' ' + randomItem(cp_corp.titles, true) + '<br>' +
+            'Chief ' + randomItem(cp_corp.executive, true) + ' Officer: ' + randomItem(cp_corp.first_names, true) + ' "<i>' + randomItem(cp_corp.nicknames, true) + '</i>" ' + randomItem(cp_corp.surnames, true) + ", " + randomItem(cp_corp.lang) + ' ' + randomItem(cp_corp.titles, true) + '<br>' +
+            'Advisor: ' + randomItem(cp_corp.celebrity) + '<p>'
+        );
+
+        dom.financials.html(
+            '<ul>' +
+			    '<li>Living costs: $' +  Math.round(Math.random()*20000) + '</li>' +
+				'<li>Server costs: $' +  Math.round(Math.random()*20000) + '</li>' +
+                '<li>Marketing costs: $' +  Math.round(Math.random()*20000) + '</li>' +
+                '<li>' + capitaliseFirstLetter(randomItem(Y.words, true)) + ': $' +  Math.round(Math.random()*20000) + '</li>' +
+                '<li>' + capitaliseFirstLetter(randomItem(Y.words, true)) + ': $' +  Math.round(Math.random()*20000) + '</li>' +
+        	    '<li>' + capitaliseFirstLetter(randomItem(Y.words)) + ': $' +  Math.round(Math.random()*20000) + '</li>' +
+        	'</ul>'
         );
 
         dom.competition.html(
@@ -367,7 +292,6 @@ var WTF = (function() {
     String.prototype.endsWith = function(suffix) {
 
         return this.indexOf(suffix, this.length - suffix.length) !== -1;
-
     };
 
     function capitaliseFirstLetter(string)
@@ -494,5 +418,4 @@ var WTF = (function() {
 
         generate: generate
     };
-
 })();

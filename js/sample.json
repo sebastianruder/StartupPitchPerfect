@@ -156,7 +156,7 @@
                     "jet", "fly", "mach", "land", "take-off"
             ],
             "words" : [
-                "take-off", "landing"
+                "take-off", "landing", "artistic maneuvers", "mach 1", "zero G"
             ]
         },
         {
@@ -310,5 +310,32 @@
 
     "executive": [
         "Financial", "Operations", "Technology", "Information", "Marketing"
+    ],
+
+    "celebrity": [
+        "Ashton Kutcher", "Bill Gates' cousin", "Larry Ellison's son-in-law", "Jessica Alba", "Jared Leto",
+        "Snoop Lion", "50 Cent", "Elon Musk's brother"
+    ],
+
+    "first_names": [
+        "Michael", "James", "John", "Robert", "David", "William", "Mary", "Christopher", "Joseph", "Richard", "Daniel",
+        "Thomas", "Matthew", "Jennifer", "Charles", "Anthony", "Patricia", "Linda", "Mark", "Elizabeth"
+    ],
+
+    "nicknames": [
+        "The Don", "The Carver", "Jabba the Hut", "The Weasel", "Baby Man", "Trump"
+    ],
+
+    "surnames": [
+        "Smith", "Johnson", "Williams", "Brown", "Jones", "Garcia", "Rodriguez", "Miller", "Martinez", "Davis",
+        "Hernandez", "Lopez", "Gonzalez", "Wilson", "Anderson", "Thomas", "Taylor", "Lee", "Moore", "Jackson"
+    ],
+
+    "lang": [
+        "R", "Java", "Javascript", "Python", "C", "C++", "GO", "Delphi", "C#", "Brainfuck", "Pascal", "Lisp"
+    ],
+
+    "titles": [
+        "whiz", "prodigy", "wizard", "hacker", "wunderkind", "programmer", "developer", "veteran", "expert"
     ]
 }
