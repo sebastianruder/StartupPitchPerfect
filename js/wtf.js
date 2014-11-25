@@ -287,6 +287,10 @@ var WTF = (function() {
         dom.competition.html(
             '<p>' + competitor1 + '<br>' + competitor2 + '<br>' + competitor3 + '<p>'
         );
+
+        dom.investment.html(
+            '<p>We ask for $' + Math.round(Math.random()*1000) + 'k at a $' + Math.round(Math.random()*10000)/100 + 'm valuation.<p>'
+        );
     }
 
     String.prototype.endsWith = function(suffix) {

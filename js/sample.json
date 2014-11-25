@@ -22,21 +22,21 @@
         {
             "name": "Airbnb",
             "affixes": [
-                "Sleep", "Guest", "Stay", "Night", "Lodge", "Hotel", "Tonight", "Bed", "Room", "Lounge", "Host"
+                "Sleep", "Guest", "Stay", "Night", "Lodge", "Hotel", "Tonight", "Bed", "Room", "Lounge", "Host", "Room"
             ],
-            "market": "accomodation"
+            "market": "accommodation"
         },
         {
             "name": "LinkedIn",
             "affixes": [
-                "Suit", "Biz", "Enterprise", "Corp", "Business"
+                "Suit", "Biz", "Corp", "Busy", "Job", "Network", "Pro"
             ],
             "market": "professional networking"
         },
         {
             "name": "Wikipedia",
             "affixes": [
-                "Know", "Info", "Wiki"
+                "Know", "Info", "Wiki", "Article", "Free", "Page", "Content", "Pedia"
             ],
             "market": "knowledge"
 
@@ -44,77 +44,77 @@
         {
             "name": "GitHub",
             "affixes": [
-                "Manage", "Work", "Team"
+                "Manage", "Work", "Team", "Joint", "Revise", "Control", "Repo", "Git"
             ],
             "market": "collaboration"
         },
         {
             "name": "Tinder",
             "affixes": [
-                "Date", "Match", "Find", "Meet", "Love"
+                "Date", "Match", "Find", "Meet", "Swipe for ", "Crush", "Affair"
             ],
             "market": "matching"
         },
         {
             "name": "Twitch",
             "affixes": [
-                "Stream", "Watch", "Show", "Live"
+                "Stream", "Watch", "Show", "Live", "Real", "Close"
             ],
             "market": "live-streaming"
         },
         {
             "name": "Reddit",
             "affixes": [
-                "News", "User", "Aggregate", "Content", "Up"
+                "News", "User", "Read", "Topic", "Content", "Up", "Notice"
             ],
             "market": "user-generated news"
         },
         {
             "name": "OpenTable",
             "affixes": [
-                "Reserve", "Open", "Place", "Seat"
+                "Reserve", "Open", "Place", "Seat", "Plan", "Ticket", "Book"
             ],
             "market": "reservations"
         },
         {
             "name": "Yelp",
             "affixes": [
-                "Review", "Star", "Local", "Rate"
+                "Review", "Star", "Local", "Rate", "Opine", "Opinion", "Advise"
             ],
-            "market": "reviews"
+            "market": "reviews and ratings"
         },
         {
             "name": "Facebook",
             "affixes": [
-                "Social", "Net", "Like", "Friend"
+                "Social", "Net", "Like", "Friend", "Stalk", "Follow", "Pal", "Amigo"
             ],
             "market": "social networking"
         },
         {
             "name": "Ebay",
             "affixes": [
-                "Buy", "Auction", "Shop", "Market"
+                "Buy", "Auction", "Shop", "Market", "Bid", "Pay", "Sell", "Offer"
             ],
             "market": "marketplace"
         },
         {
             "name": "Youtube",
             "affixes": [
-                "Upload", "Stream", "Post", "Original", "Indie"
+                "Upload", "Stream", "Post", "Original", "Indie", "Video", "Vlog", "Podcast"
             ],
             "market": "streaming"
         },
         {
             "name": "Pandora",
             "affixes": [
-                "Auto", "Recommend", "Radio"
+                "Auto", "Radio", "Select", "List", "Choice"
             ],
             "market": "recommendations"
         },
         {
             "name": "Foursquare",
             "affixes": [
-                "Check", "Place", "Local"
+                "Check", "Place", "Local", "Mayor", "Brag", "Location", "Spot", "Venue"
             ],
             "market": "local discovery"
         }
@@ -124,11 +124,11 @@
         {
             "name": "gardeners",
             "affixes": [
-                "green", "garden", "bloom", "nature"
+                "green", "garden", "bloom", "nature", "flower"
             ],
             "words": [
                 "weedkillers", "watering cans", "meticulously cut lawn", "garden ornaments", "hedge scultpures",
-                "exotic flowers"
+                "exotic flowers", "sunflower fields", "forests"
             ]
         },
         {
@@ -137,41 +137,42 @@
                 "weed", "crack", "dope", "grass", "pot", "bhang", "hemp", "herb", "tea"
             ],
             "words": [
-                "weed", "hashish", "loyal customers", "no trouble"
+                "smoking weed", "hashish", "loyal customers", "marijuana"
             ]
         },
         {
             "name": "doctors",
             "affixes": [
-                    "med", "health", "care", "doc"
+                    "med", "health", "care", "doc", "pill"
                 ],
             "words": [
-                "health", "waiting room", "patient interaction", "trustworthy receptionists", "short office hours"
+                "healthy patients", "waiting room", "patient interaction", "trustworthy receptionists", "short office hours",
+                "blood tests"
             ]
-
         },
         {
             "name": "pilots",
             "affixes": [
-                    "jet", "fly", "mach", "land", "take-off"
+                    "jet", "fly", "mach", "land", "take-off", "plane", "pilot", "air"
             ],
             "words" : [
-                "take-off", "landing", "artistic maneuvers", "mach 1", "zero G"
+                "take-off", "landing", "artistic maneuvers", "mach 1", "zero G", "short-distance flights", "auto-pilot",
+                "airshows", "toy planes", "paper planes", "flight simulations"
             ]
         },
         {
             "name": "foodies",
             "affixes": [
-                    "gourmet", "foodie", "cuisine", "yum"
+                    "gourmet", "foodie", "cuisine", "yum", "taste", "eat", "spoon", "dish", "fork", "meal", "menu", "chef"
             ],
             "words": [
-                "breakfast", "brunch", "lunch", "dinner"
+                "breakfast", "brunch", "lunch", "dinner", "dessert", "restaurants", "star chefs", "Master Chef"
             ]
         },
         {
             "name": "hipsters",
             "affixes": [
-                    "hip", "retro", "cool"
+                    "hip", "retro", "cool", "beard", "glass"
             ],
             "words": [
                 "old phones", "iPhone", "glasses", "scarves"
@@ -180,109 +181,147 @@
         {
             "name": "stock brokers",
             "affixes": [
-                    "stocks", "crunch", "econ", "fin"
+                    "stocks", "crunch", "econ", "fin", "money", "interest"
             ],
             "words": [
-                "earning money", "lobbying", "bribing"
+                "earning money", "lobbying", "bribing", "negotiating", "falling prices", "bargains"
             ]
         },
         {
             "name": "software engineers",
             "affixes": [
-                    "ware", "code"
+                    "ware", "code", "soft", "cloud", "source", "net", "web", "data"
             ],
             "words": [
-                "solving hard problems", "figuring out bugs", "building things", "learning things"
+                "solving hard problems", "figuring out bugs", "building things", "learning things", "the Internet",
+                "open-source software"
             ]
         },
         {
             "name": "video game players",
             "affixes": [
-                "game", "play", "vid", "play"
+                "game", "play", "vid", "play", "boss", "level", "upgrade", "battle", "party", "item"
             ],
             "words": [
-                "beating end bosses", "winning", "playing"
+                "beating end bosses", "winning", "leveling-up", "pwning noobs", "conquering", "co-op",
+                "dropping items", "MMORPGS"
             ]
         },
         {
             "name": "race car drivers",
             "affixes": [
-                "race", "fast", "track", "pitstop"
+                "race", "fast", "track", "pitstop", "speed"
             ],
             "words": [
-                "races", "Formula One", "Mario Kart", "pitstops"
+                "Formula One", "Mario Kart", "pitstops", "crossing the finish line", "sport cars", "pit babes"
             ]
         },
         {
             "name": "musicians",
             "affixes": [
-                "music", "rock", "note"
+                "music", "rock", "note", "jam", "beat", "play", "tune", "band"
             ],
             "words": [
-                "free music streaming", "instruments", "rock", "jam sessions"
+                "free music streaming", "tuned instruments", "rock", "jam sessions", "profound lyrics", "playing on-stage",
+                "back-stage"
             ]
         },
         {
             "name": "fitness enthusiasts",
             "affixes": [
-                "health", "fit", "healthy"
+                "health", "fit", "healthy", "yoga", "gym", "run", "jog"
             ],
             "words": [
-                "food diaries", "activity trackers", "long runs"
+                "food diaries", "activity trackers", "long runs", "yoga classes", "pilates", "marathons", "ironman",
+                "burning calories"
             ]
         },
         {
             "name": "productivity nuts",
             "affixes": [
-                "do", "achieve", "done"
+                "do", "done", "list", "to-do", "time", "note"
             ],
             "words": [
-                "productivity", "to-do lists", "meditation sessions", "yoga sessions"
+                "productivity", "to-do lists", "meditation sessions", "meeting deadlines", "calendars", "reminders",
+                "sticky notes"
             ]
         },
         {
             "name": "travelers",
             "affixes": [
-                "travel", "world", "trip", "sight", "globe"
+                "travel", "world", "trip", "sight", "globe", "ticket", "mate"
             ],
             "words": [
-                "around-the-world trips", "world-famous sights", "traveling around the globe"
+                "around-the-world trips", "world-famous sights", "traveling around the globe", "backpacking",
+                "making memories", "souvenirs", "making new friends", "couchsurfing", "Airbnb", "beaches"
             ]
         },
         {
             "name": "bros",
             "affixes": [
-                "bro", "frat", "alpha", "beta", "gamma", "phi"
+                "bro", "frat", "alpha", "beta", "gamma", "phi", "party"
             ],
             "words": [
-                "sorority chicks", "kegs", "cheap parties", "alcohol", "spring break", "frat parties"
+                "sorority chicks", "kegs", "cheap parties", "alcohol", "spring break", "frat parties",
+                "The Bro Code", "'Cool story, bro.'"
             ]
         },
         {
             "name": "model train builders",
             "affixes": [
-                "train", "build", "track", "loco", "motion", "engine", "rail"
+                "train", "build", "track", "loco", "motion", "engine", "rail", "toy"
             ],
             "words": [
-                "elaborate model train tracks", "rail kits", "model train conventions"
+                "elaborate model train tracks", "rail kits", "model train conventions", "realistic railway stations",
+                "St Andrew's crosses"
             ]
         },
         {
             "name": "chess players",
             "affixes": [
-                "check", "chess", "king", "rook"
+                "check", "chess", "king", "rook", "queen", "mate", "knight"
             ],
             "words": [
-                "blitz chess", "chess world championships", "themed chess sets"
+                "blitz chess", "chess world championships", "themed chess sets", "check-mating", "chess computers",
+                "elaborate chess boards", "3-d chess"
             ]
         },
         {
             "name": "horse lovers",
             "affixes": [
-                "horse", "pony", "mare", "barn"
+                "horse", "pony", "mare", "barn", "tail", "mane"
             ],
             "words": [
-                "show jumping competitions", "dressage competition", "going for a ride"
+                "show jumping competitions", "dressage competition", "going for a ride", "horse races", "galloping"
+            ]
+        },
+        {
+            "name": "book lovers",
+            "affixes": [
+                "book", "chapter", "read", "author", "page", "plot", "story", "tale"
+            ],
+            "words": [
+                "book shops", "book conventions", "book clubs", "page-turners", "Kindle", "bestsellers", "fairy tales"
+            ]
+        },
+        {
+            "name": "cineastes",
+            "affixes": [
+                "movie", "film", "cinema", "plot", "popcorn", "cine", "act", "drama"
+            ],
+            "words": [
+                "blockbusters", "indie movies", "Academy Awards ceremonies", "Samuel L. Jackson", "twist endings",
+                "happy endings"
+            ]
+        },
+        {
+            "name": "mathematicians",
+            "affixes": [
+                "math", "numbers", "problems", "graph", "solve", "theory"
+            ],
+            "words": [
+                "solving hard problems", "coming up with theorems", "whiteboards", "calculators", "string theory",
+                "The Big Bang Theory"
             ]
         }
     ],
