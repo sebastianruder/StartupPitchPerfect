@@ -38,6 +38,11 @@ var problemChartData = [
         value: randomScalingFactor(),
         color: "#9D9B7F",
         title: "are indifferent"
+    },
+    {
+        value: randomScalingFactor()*0.5,
+        color: "#7D4F6D",
+        title: "would not touch it with a 40-foot pole"
     }];
 
 // problem chart context
@@ -82,6 +87,7 @@ window.onload = function(){
     window.traction = new Chart(traction_chart).Line(tractionChartData, {responsive: true, scaleFontColor: "#FFF"});
     var problem_chart = document.getElementById("problem_chart").getContext("2d");
     window.problem = new Chart(problem_chart).Pie(problemChartData, problemChartContext);
-    var revenue_chart = document.getElementById("revenue_chart").getContext("2d");
-    window.traction = new Chart(revenue_chart).Bar(revenueChartData, {scaleFontColor: "#FFF"});
+    // don't draw this chart at the moment, because it's not intelligible
+    // var revenue_chart = document.getElementById("revenue_chart").getContext("2d");
+    // window.traction = new Chart(revenue_chart).Bar(revenueChartData, {scaleFontColor: "#FFF"});
 }

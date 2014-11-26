@@ -181,9 +181,11 @@ var WTF = (function() {
                 var words = object.words.slice(0);
                 // set new revenue chart labels, draw new revenue chart
                 revenue1 = randomItem(words, true); revenue2 = randomItem(words, true); revenue3 = randomItem(words, true);
+                /* // Ignore now because unintelligible
                 revenueChartData.labels = [revenue1, revenue2, revenue3];
                 var revenue_chart = new Chart(document.getElementById("revenue_chart").getContext("2d")).Bar(
                     revenueChartData, {inGraphDataFontColor: "#FFF", scaleFontColor: "#FFF"});
+                */
 
                 customers = word;
                 sale = randomItem(object.words);
@@ -230,7 +232,7 @@ var WTF = (function() {
 				'<li>' + randomItem(cp_corp.attributes, true) + ' '+ customers + '</li>' +
 				'<li>' + randomItem(cp_corp.attributes, true) + ' '+ customers + '</li>' +
 			'</ul>' +
-            '<p><br><strong>Hype cycle phase</strong>: ' + randomItem(cp_corp.hype_cycle) + '<p>'
+            '<p><br><strong><a href="http://en.wikipedia.org/wiki/Hype_cycle">Gartner Hype Cycle</a> phase</strong>: ' + randomItem(cp_corp.hype_cycle) + '<p>'
         );
 
         dom.problem.html(
