@@ -298,9 +298,9 @@ var WTF = (function() {
 
         dom.exit.html(
             '<ul>' +
-			    '<li>Getting acquired by a competitor, e.g. <strong>' + competitor2 + '</strong></li>' +
-                '<li>Going public at <strong>' + randomItem(cp_corp.stock_exchanges) + '</strong></li>' +
-                '<li>' + randomItem(cp_corp.exit) + '</li>' +
+			    '<li>Getting acquired by a competitor, e.g. <strong>' + competitor2 + '</strong>.</li>' +
+                '<li>Going public at <strong>' + randomItem(cp_corp.stock_exchanges) + '</strong>.</li>' +
+                '<li>' + randomItem(cp_corp.exit) + '.</li>' +
         	'</ul>'
         );
 
