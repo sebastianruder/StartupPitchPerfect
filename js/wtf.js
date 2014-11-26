@@ -105,6 +105,7 @@ var WTF = (function() {
             team: $( '#team' ),
             financials: $( '#financials' ),
             competition: $( '#competition' ),
+            exit: $( '#exit' ),
             investment: $( '#investment' )
         };
 
@@ -290,17 +291,22 @@ var WTF = (function() {
         );
 
         dom.competition.html(
-            '<p>' + competitor1 + '<br>' + competitor2 + '<br>' + competitor3 + '<p>'
+            '<p><strong>' + competitor1 + '</strong><br>' +
+            '<strong>' + competitor2 + '</strong><br>' +
+            '<strong>' + competitor3 + '</strong><p>'
         );
 
-
+        dom.exit.html(
+            '<ul>' +
+			    '<li>Getting acquired by a competitor, e.g. <strong>' + competitor2 + '</strong></li>' +
+                '<li>Going public at <strong>' + randomItem(cp_corp.stock_exchanges) + '</strong></li>' +
+                '<li>' + randomItem(cp_corp.exit) + '</li>' +
+        	'</ul>'
+        );
 
         var investment = Math.round(Math.random()*2000);
         var amount1 = Math.round(investment/(getRandomNumber(1,5)));
         var amount2 = Math.round((investment - amount1)/getRandomNumber(1,2));
-
-        console.log(investment, amount1, amount2);
-
         dom.investment.html(
             '<p>We ask for $' + investment + 'k at a $' + Math.round(Math.random()*10000)/100 + 'm valuation.<br>' +
             'We will put the investment to the following use:<p>' +

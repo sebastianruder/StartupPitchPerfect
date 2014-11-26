@@ -48,9 +48,17 @@
 	</head>
 
 	<body>
+    <!-- Facebook Javascript SDK for Like button -->
+        <div id="fb-root"></div>
+            <script>(function(d, s, id) {
+              var js, fjs = d.getElementsByTagName(s)[0];
+              if (d.getElementById(id)) return;
+              js = d.createElement(s); js.id = id;
+              js.src = "//connect.facebook.net/de_DE/sdk.js#xfbml=1&version=v2.0";
+              fjs.parentNode.insertBefore(js, fjs);
+            }(document, 'script', 'facebook-jssdk'));</script>
 
 		<div class="reveal">
-
 			<!-- Any section element inside of this container is displayed as a slide -->
 			<div class="slides">
 				<section>
@@ -76,9 +84,14 @@
                             Using <a href="https://github.com/hakimel/reveal.js">reveal.js</a>, <a href="https://github.com/FVANCOP/ChartNew.js">ChartNew.js</a> and <a href="https://github.com/soulwire/WTFEngine">WTFEngine</a><br>
                             Inspired by <a href="http://itsthisforthat.com/">ItsThisForThat</a>
                         </small>
-					</p>
-
-				</section>
+                    </p>
+                    <a href="https://twitter.com/share" class="twitter-share-button" data-via="rudersebastian" data-show-screen-name="false">Tweet</a>
+                    <a href="https://twitter.com/rudersebastian" class="twitter-follow-button" data-show-count="false">Follow @rudersebastian</a>
+                    <div class="fb-like" data-href="http://startuppitchperfect.sebastianruder.com/" data-layout="button_count" data-action="like" data-show-faces="true" data-share="true"></div>
+                    <!-- Twitter share and follow button scripts -->
+                    <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+'://platform.twitter.com/widgets.js';fjs.parentNode.insertBefore(js,fjs);}}(document, 'script', 'twitter-wjs');</script>
+                    <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+'://platform.twitter.com/widgets.js';fjs.parentNode.insertBefore(js,fjs);}}(document, 'script', 'twitter-wjs');</script>
+                </section>
 
 				<section>
                     <h2>Forecast customer uptake</h2>
@@ -130,7 +143,7 @@
 				</section>
 
                 <section>
-					<h2>Exit possibilities</h2>
+					<h2>Exit strategy</h2>
                     <div id="exit"></div>
 				</section>
 
@@ -139,12 +152,10 @@
                     <div id="investment"></div>
 				</section>
 			</div>
-
 		</div>
 
 		<script src="/lib/js/head.min.js"></script>
 		<script src="/js/reveal.min.js"></script>
-
 		<script>
 
 			// Full list of configuration options available here:

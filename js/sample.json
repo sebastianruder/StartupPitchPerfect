@@ -380,5 +380,16 @@
 
     "titles": [
         "whiz", "prodigy", "wizard", "hacker", "wunderkind", "programmer", "developer", "veteran", "expert"
+    ],
+
+    "stock_exchanges": [
+        "the New York Stock Exchange", "NASDAQ", "the Japan Exchange Group", "Euronext", "London Stock Exchange",
+        "the Hong Kong Stock Exchange", "the Shanghai Stock Exchange", "the TMX Group", "the Shenzen Stock Exchange",
+        "the Deutsche Börse"
+    ],
+
+    "exit": [
+        "Becoming a patent troll", "World dominance", "Getting <i>all</i> the money", "Market leadership",
+        "Becoming a satirical, Uber-like version of ourselves ", "Taking the money and making off to a tropic island"
     ]
 }
