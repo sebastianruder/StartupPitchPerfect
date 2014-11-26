@@ -151,7 +151,7 @@ var WTF = (function() {
             item = regex.exec( idea ),
             cp_corp = cloneCorpus(),
             object, customers, sale, name = "", competitor1 = "", competitor2 = "", competitor3 = "",
-            revenue1, revenue2, revenue3, Y;
+            revenue1, revenue2, revenue3, finance1, finance2, finance3;
 
         while ( item && ++iter < 1000 ) {
 
@@ -177,7 +177,6 @@ var WTF = (function() {
                     object.affixes.push("ly");
                     object.affixes.push("io");
                 }
-                Y = object;
                 // slice copies array without reference
                 var words = object.words.slice(0);
                 // set new revenue chart labels, draw new revenue chart
@@ -192,6 +191,11 @@ var WTF = (function() {
                 words = object.words.slice(0);
                 cp_corp.executive.push(capitaliseFirstLetter(randomItem(words, true)));
                 cp_corp.executive.push(capitaliseFirstLetter(randomItem(words)));
+
+                words = object.words.slice(0);
+                finance1 = randomItem(words, true);
+                finance2 = randomItem(words, true);
+                finance3 = randomItem(words, true);
             }
 
             // console.log( object, object.affixes );
@@ -209,12 +213,11 @@ var WTF = (function() {
         }
 
         // Update slides
-        //dom.generate.text( randomItem( responses ));
-        dom.generate.text(responses[0])
+        dom.generate.text( randomItem( responses ));
 
         dom.elevator_pitch.html(
-            '<p><small>Improve your pitching skills! Convince your mates that your startup is the next ' +
-            randomItem( cp_corp.next ) + '. Ready?</small></p>' +
+            '<p><small>Improve your pitching skills! Convince your mates that your startup is the next <strong>' +
+            randomItem( cp_corp.next ) + '</strong>. Ready?</small></p>' +
             '<h1>' + name + '</h1>' +
             '<h3>A ' + idea + '</h3>'
         );
@@ -278,9 +281,9 @@ var WTF = (function() {
 			    '<li>Living costs: $' +  Math.round(Math.random()*20000) + '</li>' +
 				'<li>Server costs: $' +  Math.round(Math.random()*20000) + '</li>' +
                 '<li>Marketing costs: $' +  Math.round(Math.random()*20000) + '</li>' +
-                '<li>' + capitaliseFirstLetter(randomItem(Y.words, true)) + ': $' +  Math.round(Math.random()*20000) + '</li>' +
-                '<li>' + capitaliseFirstLetter(randomItem(Y.words, true)) + ': $' +  Math.round(Math.random()*20000) + '</li>' +
-        	    '<li>' + capitaliseFirstLetter(randomItem(Y.words)) + ': $' +  Math.round(Math.random()*20000) + '</li>' +
+                '<li>' + capitaliseFirstLetter(finance1) + ': $' +  Math.round(Math.random()*20000) + '</li>' +
+                '<li>' + capitaliseFirstLetter(finance2) + ': $' +  Math.round(Math.random()*20000) + '</li>' +
+        	    '<li>' + capitaliseFirstLetter(finance3) + ': $' +  Math.round(Math.random()*20000) + '</li>' +
         	'</ul>'
         );
 

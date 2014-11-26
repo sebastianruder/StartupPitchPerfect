@@ -1,6 +1,10 @@
 {
     "response": [
-        "Pitch me again!"
+        "Give me another pitch!",
+        "Too unoriginal. Next!",
+        "Boring. Give me another one!",
+        "Uncreative. Next pitch!",
+        "Yawn. Hit me again!"
     ],
 
     "template": [
