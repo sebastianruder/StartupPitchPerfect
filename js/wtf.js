@@ -293,9 +293,27 @@ var WTF = (function() {
             '<p>' + competitor1 + '<br>' + competitor2 + '<br>' + competitor3 + '<p>'
         );
 
+
+
+        var investment = Math.round(Math.random()*2000);
+        var amount1 = Math.round(investment/(getRandomNumber(1,5)));
+        var amount2 = Math.round((investment - amount1)/getRandomNumber(1,2));
+
+        console.log(investment, amount1, amount2);
+
         dom.investment.html(
-            '<p>We ask for $' + Math.round(Math.random()*1000) + 'k at a $' + Math.round(Math.random()*10000)/100 + 'm valuation.<p>'
+            '<p>We ask for $' + investment + 'k at a $' + Math.round(Math.random()*10000)/100 + 'm valuation.<br>' +
+            'We will put the investment to the following use:<p>' +
+            '<ul>' +
+			    '<li>$' + amount1 + 'k for ' + revenue1 + ',</li>' +
+				'<li>$' + amount2 + 'k for ' + revenue2 + ',</li>' +
+                '<li>$' + (investment - amount1 - amount2) + 'k for ' + revenue3 + '.</li>' +
+        	'</ul>'
         );
+    }
+
+    function getRandomNumber(min, max) {
+        return Math.random() * (max - min) + min;
     }
 
     String.prototype.endsWith = function(suffix) {
