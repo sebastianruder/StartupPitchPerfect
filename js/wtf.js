@@ -97,6 +97,7 @@ var WTF = (function() {
         dom = {
             generate: $( '#generate' ),
             elevator_pitch: $( '#elevator_pitch' ),
+            x_for_y: $( '#x_for_y' ),
             market: $( '#market'),
             problem: $( '#problem' ),
             product: $( '#product' ),
@@ -219,8 +220,13 @@ var WTF = (function() {
         dom.generate.text( randomItem( responses ));
 
         dom.elevator_pitch.html(
-            '<p><small>Improve your pitching skills! Convince your mates that your startup is the next <strong>' +
-            randomItem( cp_corp.next ) + '</strong>. Ready?</small></p>' +
+            '<p><small>Having trouble persuading VCs your startup is the next <strong>' +
+            randomItem( cp_corp.next ) + '</strong>? Not even your mum wants to fund you?<br>' +
+            'Improve your pitching skills with <strong>Startup Pitch Perfect</strong> and convince ' +
+            'investors to give you millions!</small></p>'
+        );
+
+        dom.x_for_y.html(
             '<h1>' + name + '</h1>' +
             '<h3>A ' + idea + '</h3>'
         );

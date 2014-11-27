@@ -132,7 +132,7 @@
             ],
             "words": [
                 "weedkillers", "watering cans", "meticulously cut lawn", "garden ornaments", "hedge scultpures",
-                "exotic flowers", "sunflower fields", "forests"
+                "exotic flowers", "sunflower fields", "dense forests"
             ]
         },
         {
@@ -141,7 +141,7 @@
                 "weed", "crack", "dope", "grass", "pot", "bhang", "hemp", "herb", "tea"
             ],
             "words": [
-                "smoking weed", "hashish", "loyal customers", "marijuana"
+                "smoking weed", "hashish", "loyal customers", "marijuana", "fast delivery"
             ]
         },
         {
@@ -150,8 +150,8 @@
                     "med", "health", "care", "doc", "pill"
                 ],
             "words": [
-                "healthy patients", "waiting room", "patient interaction", "trustworthy receptionists", "short office hours",
-                "blood tests"
+                "healthy patients", "waiting rooms", "interacting with patients", "trustworthy receptionists",
+                "short office hours", "administering blood tests"
             ]
         },
         {
@@ -160,8 +160,8 @@
                     "jet", "fly", "mach", "land", "take-off", "plane", "pilot", "air"
             ],
             "words" : [
-                "take-off", "landing", "artistic maneuvers", "mach 1", "zero G", "short-distance flights", "auto-pilot",
-                "airshows", "toy planes", "paper planes", "flight simulations"
+                "taking-off", "landing", "acrobatic maneuvers", "reaching mach 1", "being in zero G",
+                "short-distance flights", "flying on auto-pilot", "airshows", "toy planes", "paper planes", "flight simulations"
             ]
         },
         {
@@ -170,16 +170,18 @@
                     "gourmet", "foodie", "cuisine", "yum", "taste", "eat", "spoon", "dish", "fork", "meal", "menu", "chef"
             ],
             "words": [
-                "breakfast", "brunch", "lunch", "dinner", "dessert", "restaurants", "star chefs", "Master Chef"
+                "breakfast", "brunch", "lunch", "dinner", "dessert", "restaurants",
+                "dining at Michelin starred restaurants", "Master Chef"
             ]
         },
         {
             "name": "hipsters",
             "affixes": [
-                    "hip", "retro", "cool", "beard", "glass"
+                    "hip", "retro", "cool", "beard", "glass", "vintage", "indie", "irony"
             ],
             "words": [
-                "old phones", "iPhone", "glasses", "scarves"
+                "iPhones", "scarves", "shopping at vintage stores", "skinny jeans",
+                "Ray Ban Wayfarers"
             ]
         },
         {
@@ -207,17 +209,17 @@
                 "game", "play", "vid", "play", "boss", "level", "upgrade", "battle", "party", "item"
             ],
             "words": [
-                "beating end bosses", "winning", "leveling-up", "pwning noobs", "conquering", "co-op",
+                "beating end bosses", "winning", "leveling-up", "pwning noobs", "conquering", "playing co-op",
                 "dropping items", "MMORPGS"
             ]
         },
         {
             "name": "race car drivers",
             "affixes": [
-                "race", "fast", "track", "pitstop", "speed"
+                "race", "fast", "track", "speed"
             ],
             "words": [
-                "Formula One", "Mario Kart", "pitstops", "crossing the finish line", "sport cars", "pit babes"
+                "Formula One", "Mario Kart", "pit stops", "crossing the finish line", "sport cars", "pit babes"
             ]
         },
         {
